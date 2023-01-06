@@ -1,0 +1,36 @@
+.card{
+    padding: 20px 8px 20px 8px;
+    text-align: initial;
+    
+}
+.col{
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+.btn-primary{
+    color: white;
+}
+.card-img-top{
+   width: 120px !important;
+    align-items: center;
+}
+.text-truncate {
+    /* overflow: hidden;
+    
+    white-space: nowrap; */
+    margin-top: 12px;
+    font-weight: 450;
+}
+.card-effect:hover{
+    border-color: #0dc90d;
+    box-shadow: 0 0 11px rgb(211, 211, 211); 
+}
+.text-truncate:hover{
+    color: #079407;
+}

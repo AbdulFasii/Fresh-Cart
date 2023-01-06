@@ -1,0 +1,42 @@
+.btn-lg{
+    margin-right: 0.1rem;
+    font-size: large;
+}
+.navbar-toggler{
+    font-size: medium;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    width: 382px;
+  }
+  
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+  .btn-location{
+    width: 115px;
+    background-color: #fff;
+    margin-left: 10px;
+    border: 1px solid #aaa;
+  }
+  .btn-primary{
+    background-color: #079407;
+    border-color: #ffffff ;
+    color: #fff !important;
+  }
+  .btn-primary:hover{
+    background-color: #088208;
+    border-color: #ffffff ;
+  }
+  .mb-8{
+    margin-bottom: 2rem !important;
+  }

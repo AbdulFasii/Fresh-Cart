@@ -1,0 +1,18 @@
+.countdown-section{
+    border: 1px solid #dfe2e1;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 10px 8px 10px;
+    position: relative;
+}
+.countdown-amount{
+    color: black;
+
+}
+.btn-primary{
+    color: white;
+}
