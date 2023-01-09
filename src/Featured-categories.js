@@ -12,10 +12,8 @@ function Categories(props) {
           <div className="card card-effect d-flex align-items-center">
             <img
               src={props.img}
-              className="card-img-top"
+              className="card-img-top img-wd-ht-120"
               alt="..."
-              height={120}
-              width={120}
             />
             <h6 className="text-truncate ">{props.title}</h6>
           </div>

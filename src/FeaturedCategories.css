@@ -17,7 +17,7 @@ a{
     color: white;
 }
 .card-img-top{
-   width: 120px !important;
+   
     align-items: center;
 }
 .text-truncate {
@@ -33,4 +33,8 @@ a{
 }
 .text-truncate:hover{
     color: #079407;
+}
+.img-wd-ht-120{
+    width: 120px !important;
+    height: 120px;
 }
