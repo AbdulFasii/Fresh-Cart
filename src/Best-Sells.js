@@ -19,13 +19,13 @@ function BestSellProduct(props) {
               />
             </div>
 
-            {/* <div>
+            <div>
               <Link to='/categorie' className="text-decoration-none text-muted">
                 <small>{props.categorie}</small>
               </Link>
 
               <h6 className="text-truncate bold fw-bold">{props.title}</h6>
-            </div> */}
+            </div>
 
             <div className="d-flex justify-content-between align-items-center mt-3 w-100">
               <div className="price">
