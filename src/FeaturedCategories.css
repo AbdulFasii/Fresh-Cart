@@ -21,9 +21,6 @@ a{
     align-items: center;
 }
 .text-truncate {
-    /* overflow: hidden;
-    
-    white-space: nowrap; */
     margin-top: 12px;
     font-weight: 450;
 }

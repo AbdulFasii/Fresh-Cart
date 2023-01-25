@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
+import productsDetails from "./Product.json";
+import { useParams } from "react-router-dom";
 
 function QuantityField() {
   const [count, setCount] = useState(0);
@@ -12,37 +14,49 @@ function QuantityField() {
     }
   }
   function handlePlusClick() {
-      setCount(count + 1);
-    }
-  
+    setCount(count + 1);
+  }
+
   return (
     <div className="input-group input-spinner ">
-      <input
+      <button
         type="button"
+        class="btn btn-light btn-quantity btn-sm me-1"
         value="-"
-        className="button-minus  btn  btn-sm "
         data-field="quantity"
         onClick={handleMinusClick}
-      />
+      >
+        -
+      </button>
+
       <input
         type="number"
-        step="1"
         value={count}
-        name="quantity"
-        className="quantity-field form-control-sm form-input "
+        class="form-control form-quntity-field"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-sm"
+        width={45}
       />
-      <input
+
+      <button
         type="button"
+        class="btn btn-light btn-sm ms-1 btn-quantity"
         value="+"
-        className="button-plus btn btn-sm "
         data-field="quantity"
         onClick={handlePlusClick}
-      />
+      >
+        +
+      </button>
     </div>
   );
 }
 
 export const ProductDetails = () => {
+  let { productId } = useParams();
+  const productDetails = productsDetails.find(
+    (data) => data.productId == productId
+  );
+  console.log(productDetails);
   return (
     <div className="container d-flex mt-4">
       <div className="container ps-lg-10 col-md-6 col-sm-12 col-12">
@@ -50,8 +64,9 @@ export const ProductDetails = () => {
           <img
             className=""
             style={{ width: "100%" }}
-            src="https://freshcart.codescandy.com/assets/images/products/product-single-img-1.jpg"
+            src={productDetails.img}
             alt=""
+            height={252}
           />
         </div>
         <div className="tn-row row mt-3">
@@ -88,10 +103,10 @@ export const ProductDetails = () => {
       <div className="container ps-lg-10 col-md-6 col-sm-12 col-12">
         <div>
           <Link to="/categorie" className="mb-4 d-block">
-            <h6 className="text-green">Snack & Munchies</h6>
+            <h6 className="text-green">{productDetails.categorie}</h6>
           </Link>
 
-          <h1 className="mb-1 ">Onion Flavour Potato</h1>
+          <h1 className="mb-1 ">{productDetails.title}</h1>
         </div>
         <div className="text-warning star-rating">
           <small>
@@ -101,13 +116,13 @@ export const ProductDetails = () => {
             <i className="fa-solid fa-star"></i>
             <i className="fa-regular fa-star"></i>
           </small>
-          <span className=" ms-2 text-green"> (123)</span>
+          <span className=" ms-2 text-green"> ({productDetails.response})</span>
         </div>
         <div className="d-flex justify-content-between align-items-center mt-3 w-100">
           <div className="price">
-            <span className="text-dark fw-bold fs-4">Rs. 25</span>
+            <span className="text-dark fw-bold fs-4">Rs.{productDetails.offerRate}</span>
             <span className="text-decoration-line-through text-muted ms-1 fs-4">
-              Rs.30
+              Rs.{productDetails.actulRate}
             </span>
             <span>
               <small className="fs-6 ms-1 text-danger">26% Off</small>
@@ -115,7 +130,7 @@ export const ProductDetails = () => {
           </div>
         </div>
         <hr className="my-6"></hr>
-        <div className="mb-5">
+        <div className="mb-4">
           <button type="button" className="btn btn-outline-secondary">
             250g
           </button>
@@ -127,7 +142,7 @@ export const ProductDetails = () => {
           </button>
         </div>
         <QuantityField />
-        <div className="mt-3 ro justify-content-start align-items-center">
+        <div className="mt-4 ro justify-content-start align-items-center">
           <button type="button" className="btn btn-primary btn-lg">
             <i className="fa-sharp fa-solid fa-bag-shopping me-2"></i>Add to
             cart

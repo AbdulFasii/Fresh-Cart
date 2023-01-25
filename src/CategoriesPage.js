@@ -1,24 +1,78 @@
 import React from "react";
-import Footer from "./Footer";
-
-const Checkbox = (props) => {
-  return (
-    <div className="form-check mb-2">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value={props.value}
-        id={props.id}
-        onChange= {props.onChange}
-      />
-      <label className="form-check-label" for="eGrocery">
-        {props.label}
-      </label>
-    </div>
-  );
-};
+import categorieDetails from "./Categories.json";
+import ProductDetails from "./Product.json";
+import { PopularProduct } from "./Popular-Products";
+import Wrapper from "./Wrapper";
 
 export const CategoriesPage = () => {
+  let arr = [
+    { id: "eGrocery", label: "E-Grocery", value: "", onChange: () => {} },
+    { id: "DealShare", label: "DealShare", value: "", onChange: () => {} },
+    { id: "Dmart", label: "Dmart", value: "", onChange: () => {} },
+    { id: "Blinkit", label: "Blinkit", value: "", onChange: () => {} },
+    { id: "BigBasket", label: "BigBasket", value: "", onChange: () => {} },
+    { id: "StoreFront", label: "StoreFront", value: "", onChange: () => {} },
+    { id: "Spencers", label: "Spencers", value: "", onChange: () => {} },
+    {
+      id: "Online Grocery",
+      label: "Online Grocery",
+      value: "",
+      onChange: () => {},
+    },
+  ];
+
+  const Checkbox = (props) => {
+    return (
+      <div className="form-check mb-2">
+        <input
+          className="form-check-input"
+          type="checkbox"
+          value={props.value}
+          id={props.id}
+          onChange={props.onChange}
+        />
+        <label className="form-check-label" for="eGrocery">
+          {props.label}
+        </label>
+      </div>
+    );
+  };
+  const checkboxes = arr.map((details, id) => {
+    return (
+      <Checkbox
+        key={id}
+        id={details.id}
+        label={details.label}
+        value={details.value}
+        onChange={details.onChange}
+      />
+    );
+  });
+
+  const categories = categorieDetails.map((details, id) => {
+    return (
+      <li className="list-group-item d-flex justify-content-between align-items-center">
+        {details.lable}
+        <span className="badge bg-primary rounded-pill"></span>
+      </li>
+    );
+  });
+  const categorieProducts = ProductDetails.map((product, id) => {
+    return (
+      <PopularProduct
+        key={id}
+        productId={product.productId}
+        img={product.img}
+        categorie={product.categorie}
+        title={product.title}
+        rating={product.rating}
+        response={product.response}
+        offerRate={product.offerRate}
+        actulRate={product.actulRate}
+      />
+    );
+  });
+
   return (
     <>
       <div className="container mt-3">
@@ -40,20 +94,7 @@ export const CategoriesPage = () => {
       <div className="container d-flex ">
         <div className="col-lg-3 d-lg-block d-none me-3">
           <h5 className="mb-3">Categories</h5>
-          <ul className="list-group">
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-              Dairy, Bread & Eggs
-              <span className="badge bg-primary rounded-pill"></span>
-            </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-              Snacks & Munchies
-              <span className="badge bg-primary rounded-pill"></span>
-            </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-              Fruits & Vegetables
-              <span className="badge bg-primary rounded-pill"></span>
-            </li>
-          </ul>
+          <ul className="list-group">{categories}</ul>
 
           <div className="mb-8">
             <h5 className="mb-1 mt-3">Stores</h5>
@@ -64,14 +105,8 @@ export const CategoriesPage = () => {
                 placeholder="Search by store"
               />
             </div>
-            <Checkbox id={"eGrocery"} label={"E-Grocery"} value={""} onChange={()=>{}}/>
-            <Checkbox id={"DealShare"} label={"DealShare"} value={""} onChange={()=>{}}/>
-            <Checkbox id={"Dmart"} label={"Dmart"} value={""} onChange={()=>{}}/>
-            <Checkbox id={"Blinkit"} label={"Blinit"} value={""} onChange={()=>{}}/>
-            <Checkbox id={"BigBasket"} label={"BigBasket"} value={""} onChange={()=>{}}/>
-            <Checkbox id={"StoreFront"} label={"StoreFront"} value={""} onChange={()=>{}} />
-            <Checkbox id={"Spencers"} label={"Spencers"} value={""} onChange={()=>{}}/>
-            <Checkbox id={"onlineGrocery"} label={"Online Grocery"} value={""} onChange={()=>{}} />
+
+            {checkboxes}
           </div>
           <div className="mb-8">
             <h5 className="mb-2 mt-3">Rating</h5>
@@ -207,6 +242,7 @@ export const CategoriesPage = () => {
                   </div>
                   <div className="ms-2 d-lg-none">
                     <a
+                      href="#!"
                       className="btn btn-outline-gray-400 text-muted"
                       role="button"
                     >
@@ -242,6 +278,8 @@ export const CategoriesPage = () => {
                 </div>
               </div>
             </div>
+            <Wrapper content={<>{categorieProducts}</>} />
+
             <div className="mt-4">
               <nav aria-label="Page navigation example">
                 <ul className="pagination">
@@ -276,8 +314,6 @@ export const CategoriesPage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

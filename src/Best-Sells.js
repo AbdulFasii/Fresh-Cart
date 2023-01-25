@@ -93,7 +93,7 @@ export default function BestSellProducts() {
             title={"Roast Ground Coffee"}
             rating={"5"}
             response={"23"}
-            offerRate={"250"}
+            offerRate={"260"}
             actulRate={"300"}
           />
           <BestSellProduct
@@ -115,7 +115,7 @@ export default function BestSellProducts() {
             title={"Roast Ground Coffee"}
             rating={"5"}
             response={"23"}
-            offerRate={"250"}
+            offerRate={"260"}
             actulRate={"300"}
           />
           <BestSellProduct

@@ -1,0 +1,242 @@
+[
+  {
+    "productId": 1,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-1.jpg",
+
+    "categorie": "Snack & Munchies",
+    "title": "Haldiram's Sev Bhujia",
+    "rating": 4,
+    "response": 149,
+    "offerRate": 40,
+    "actulRate": 50,
+    "isPopular": false
+  },
+  {
+    "productId": 2,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-2.jpg",
+
+    "categorie": "Bakery & Biscuits",
+    "title": "NutriChoice Digestive",
+    "rating": 3,
+    "response": 25,
+    "offerRate": 25,
+    "actulRate": 30,
+    "isPopular": true
+  },
+  {
+    "productId": 3,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-3.jpg",
+
+    "categorie": "Bakery & Biscuits",
+    "title": "Cadbury 5 Star Chocolate",
+    "rating": 5,
+    "response": 469,
+    "offerRate": 64,
+    "actulRate": 70,
+    "isPopular": true
+  },
+  {
+    "productId": 4,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg",
+
+    "categorie": "Snack & Munchies",
+    "title": "Onion Flavour Potato",
+    "rating": 3,
+    "response": 456,
+    "offerRate": 8,
+    "actulRate": 10,
+    "isPopular": true
+  },
+  {
+    "productId": 5,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-5.jpg",
+
+    "categorie": "Instant Food",
+    "title": "Salted Instant Popcorn",
+    "rating": 4,
+    "response": 39,
+    "offerRate": 26,
+    "actulRate": 30,
+    "isPopular": true
+  },
+  {
+    "productId": 6,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg",
+
+    "categorie": "Dairy, Bread & Eggs",
+    "title": "Blueberry Greek Yogurt",
+    "rating": 4,
+    "response": 189,
+    "offerRate": 40,
+    "actulRate": 50,
+    "isPopular": true
+  },
+  {
+    "productId": 7,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-7.jpg",
+
+    "categorie": "Dairy, Bread & Eggs",
+    "title": "Britannia Cheese Slices",
+    "rating": 5,
+    "response": 345,
+    "offerRate": 48,
+    "actulRate": 50,
+    "isPopular": false
+  },
+  {
+    "productId": 8,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-8.jpg",
+
+    "categorie": "Instant Food",
+    "title": "Kellogg's Original Cereals",
+    "rating": 4,
+    "response": 90,
+    "offerRate": 64,
+    "actulRate": 70,
+    "isPopular": false
+  },
+  {
+    "productId": 9,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-9.jpg",
+
+    "categorie": "Snack & Munchies",
+    "title": "Slurrp Millet Chocolate",
+    "rating": 4,
+    "response": 67,
+    "offerRate": 6,
+    "actulRate": 10,
+    "isPopular": true
+  },
+  {
+    "productId": 10,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-10.jpg",
+
+    "categorie": "Dairy, Bread & Eggs",
+    "title": "Amul Butter - 500 g",
+    "rating": 3,
+    "response": 89,
+    "offerRate": 26,
+    "actulRate": 30,
+    "isPopular": false
+  },
+  {
+    "productId": 11,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-11.jpg",
+
+    "categorie": "Tea, Coffee & Drinks",
+    "title": "Roast Ground Coffee",
+    "rating": 4,
+    "response": 45,
+    "offerRate": 260,
+    "actulRate": 300,
+    "isPopular": true
+  },
+  {
+    "productId": 12,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-12.jpg",
+
+    "categorie": "Fruits & Vegetables",
+    "title": "Slurrp Millet Chocolate",
+    "rating": 4,
+    "response": 67,
+    "offerRate": 95,
+    "actulRate": 100,
+    "isPopular": false
+  },
+  {
+    "productId": 13,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-13.jpg",
+
+    "categorie": "Fruits & Vegetables",
+    "title": "Golden Pineapple",
+    "rating": 4,
+    "response": 67,
+    "offerRate": 26,
+    "actulRate": 30,
+    "isPopular": true
+  },
+  {
+    "productId": 14,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-1.jpg",
+
+    "categorie": "Snack & Munchies",
+    "title": "Haldiram's Sev Bhujia",
+    "rating": 4,
+    "response": 149,
+    "offerRate": 40,
+    "actulRate": 50,
+    "isPopular": false
+  },
+  {
+    "productId": 15,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-2.jpg",
+
+    "categorie": "Bakery & Biscuits",
+    "title": "NutriChoice Digestive",
+    "rating": 3,
+    "response": 25,
+    "offerRate": 25,
+    "actulRate": 30,
+    "isPopular": false
+  },
+  {
+    "productId": 16,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-3.jpg",
+
+    "categorie": "Bakery & Biscuits",
+    "title": "Cadbury 5 Star Chocolate",
+    "rating": 5,
+    "response": 469,
+    "offerRate": 64,
+    "actulRate": 70,
+    "isPopular": false
+  },
+  {
+    "productId": 17,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg",
+
+    "categorie": "Snack & Munchies",
+    "title": "Onion Flavour Potato",
+    "rating": 3,
+    "response": 456,
+    "offerRate": 8,
+    "actulRate": 10,
+    "isPopular": false
+  },
+  {
+    "productId": 18,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-5.jpg",
+
+    "categorie": "Instant Food",
+    "title": "Salted Instant Popcorn",
+    "rating": 4,
+    "response": 39,
+    "offerRate": 26,
+    "actulRate": 30,
+    "isPopular": false
+  },
+  {
+    "productId": 19,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg",
+
+    "categorie": "Dairy, Bread & Eggs",
+    "title": "Blueberry Greek Yogurt",
+    "rating": 4,
+    "response": 189,
+    "offerRate": 40,
+    "actulRate": 50,
+    "isPopular": false
+  },
+  {
+    "productId": 20,
+    "img": "https://freshcart.codescandy.com/assets/images/products/product-img-7.jpg",
+
+    "categorie": "Dairy, Bread & Eggs",
+    "title": "Britannia Cheese Slices",
+    "rating": 5,
+    "response": 345,
+    "offerRate": 48,
+    "actulRate": 50,
+    "isPopular": false
+  }
+]

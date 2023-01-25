@@ -34,9 +34,18 @@
     color: #fff !important;
   }
   .btn-primary:hover{
-    background-color: #088208;
+    background-color: #0aad0a;
     border-color: #ffffff ;
   }
   .mb-8{
     margin-bottom: 2rem !important;
+  }
+  .nav-link-color{
+    color: #000;
+  }
+  .nav-link-color:hover{
+    color: #0aad0a;
+  }
+  .nav-link-color.active{
+    color: #0aad0a !important;
   }

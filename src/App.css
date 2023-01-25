@@ -4,3 +4,12 @@
 .text-green:hover{
     color: #099309;
 }
+.form-quntity-field{
+    width: 50px !important;
+    flex: none !important;
+    height: 32px;
+
+}
+.btn-quantity{
+    width : 24px !important
+}

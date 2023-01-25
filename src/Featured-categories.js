@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./FeaturedCategories.css";
 import Wrapper from "./Wrapper";
+import categorieDetails from "./Categories.json";
 
 function Categories(props) {
   return (
@@ -25,35 +26,17 @@ function Categories(props) {
   );
 }
 export default function FeaturedCategories() {
+const categories = categorieDetails.map((details, id)=>{
+return <Categories
+            img={details.img}
+            title={details.lable}
+          />
+}
+)
   return (
     <Wrapper title={"Featured Categories"} content={
       <>
-        
-          <Categories
-            img="https://freshcart.codescandy.com/assets/images/category/category-dairy-bread-eggs.jpg"
-            title={"Diary, Bread & Eggs"}
-          />
-          <Categories
-            img="https://freshcart.codescandy.com/assets/images/category/category-snack-munchies.jpg"
-            title={"Snacks & Munchies"}
-          />
-          <Categories
-            img="https://freshcart.codescandy.com/assets/images/category/category-bakery-biscuits.jpg"
-            title={"Bakery & Biscuits"}
-          />
-          <Categories
-            img="https://freshcart.codescandy.com/assets/images/category/category-instant-food.jpg"
-            title={"Instant Foods"}
-          />
-
-          <Categories
-            img="https://freshcart.codescandy.com/assets/images/category/category-baby-care.jpg"
-            title={"Baby Care"}
-          />
-          <Categories
-            img="https://freshcart.codescandy.com/assets/images/category/category-atta-rice-dal.jpg"
-            title={"Atta,Rice & Dal"}
-          />
+        {categories}
         </>}
         />
   

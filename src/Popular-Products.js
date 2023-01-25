@@ -1,11 +1,12 @@
 import React from "react";
+import Products from "./Product.json";
 import { Link } from "react-router-dom";
 import Wrapper from "./Wrapper";
 export const PopularProduct = (props) => {
   return (
     <div className="col-3 col-sm-4 col-lg-3">
       <div className="product-card mb-3">
-       <Link to="/product">
+        <Link to={`/product/${props.productId}`}>
           <div className="card card-effect p-3">
             <div className="position-relative d-flex align-self-center">
               <img
@@ -21,7 +22,7 @@ export const PopularProduct = (props) => {
             </div>
 
             <div>
-              <Link to='/categorie'>
+              <Link to="/categorie">
                 <small>{props.categorie}</small>
               </Link>
 
@@ -59,81 +60,28 @@ export const PopularProduct = (props) => {
       </div>
     </div>
   );
-}
+};
 export default function PopProducts() {
-  return (
-    <Wrapper
-      title={"Popular Products"}
-      content={
-        <>
-          <PopularProduct
-            img={
-              "https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg"
-            }
-            categorie={"Snack & Munchies"}
-            title={"Onion Flavour Potato"}
-            rating={"3"}
-            response={"123"}
-            offerRate={"25"}
-            actulRate={"30"}
-          />
-          <PopularProduct
-            img={
-              "https://freshcart.codescandy.com/assets/images/products/product-img-5.jpg"
-            }
-            categorie={"Instant Food"}
-            title={"Salted Instant Popcorn"}
-            rating={"4"}
-            response={"64"}
-            offerRate={"42"}
-            actulRate={"50"}
-          />
-          <PopularProduct
-            img={
-              "https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg"
-            }
-            categorie={"Dairy,Bread & Eggs"}
-            title={"Blueberry Greek Yogurt"}
-            rating={"5"}
-            response={"23"}
-            offerRate={"250"}
-            actulRate={"300"}
-          />
-          <PopularProduct
-            img={
-              "https://freshcart.codescandy.com/assets/images/products/product-img-3.jpg"
-            }
-            categorie={"Bakery & Biscuits"}
-            title={"Cadbury 5 Star Chocolate"}
-            rating={"4"}
-            response={"93"}
-            offerRate={"18"}
-            actulRate={"20"}
-          />
-          <PopularProduct
-            img={
-              "https://freshcart.codescandy.com/assets/images/products/product-img-2.jpg"
-            }
-            categorie={"Bakery & Biscuits"}
-            title={"NutriChoice Digestive"}
-            rating={"3"}
-            response={"87"} 
-            offerRate={"35"}
-            actulRate={"40"}
-          />
-          <PopularProduct
-            img={
-              "https://freshcart.codescandy.com/assets/images/products/product-img-1.jpg"
-            }
-            categorie={"Snack & Munchies"}
-            title={"Haldiram's Sev Bhujia"}
-            rating={"2"}
-            response={"23"}
-            offerRate={"32"}
-            actulRate={"40"}
-          />
-        </>
-      }
-    />
-  );
+  var data = Products;
+  let popularProducts = data.filter((product) => product.isPopular === true);
+
+  const popProducts = popularProducts.map((product, id) => {
+    return (
+      <>
+        <PopularProduct
+          key={id}
+          productId={product.productId}
+          img={product.img}
+          categorie={product.categorie}
+          title={product.title}
+          rating={product.rating}
+          response={product.response}
+          offerRate={product.offerRate}
+          actulRate={product.actulRate}
+        />
+      </>
+    );
+  });
+
+  return <Wrapper title={"Popular Products"} content={<>{popProducts}</>} />;
 }

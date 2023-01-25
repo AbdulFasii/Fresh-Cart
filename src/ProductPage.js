@@ -2,7 +2,6 @@ import React from "react";
 import { ProductDetails } from "./ProductDetails";
 import { ProductInfo } from "./ProductInfo";
 import { RelatedItems } from "./RelatedItems";
-import Footer from "./Footer";
 export const ProductPage = () => {
   return (
     <>
@@ -27,7 +26,6 @@ export const ProductPage = () => {
         <RelatedItems />
         </div>
         
-          <Footer />
       
       
     </>
